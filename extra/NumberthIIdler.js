@@ -48,7 +48,7 @@ var init = () => {
     {
         let getDesc = (level) => "ones=2^{" + level + "}";
         let getInfo = (level) => "ones=" + getONES(level).toString(0);
-        ones = theory.createUpgrade(1, currency_ZERO, new ExponentialCost(1e300, Math.log2(1e300)));
+        ones = theory.createUpgrade(2, currency_ZERO, new ExponentialCost(1e300, Math.log2(1e300)));
         ones.getDescription = (_) => Utils.getMath(getDesc(ones.level));
         ones.getInfo = (amount) => Utils.getMathTo(getInfo(ones.level), getInfo(ones.level + amount));
     }
@@ -57,7 +57,7 @@ var init = () => {
     {
         let getDesc = (level) => "triplegain=3^{" + level + "}";
         let getInfo = (level) => "triplegain=" + getONES(level).toString(0);
-        triplegain = theory.createUpgrade(1, currency_ONE, new ExponentialCost(1e6, Math.log2(1e2)));
+        triplegain = theory.createUpgrade(3, currency_ONE, new ExponentialCost(1e6, Math.log2(1e2)));
         triplegain.getDescription = (_) => Utils.getMath(getDesc(triplegain.level));
         triplegain.getInfo = (amount) => Utils.getMathTo(getInfo(triplegain.level), getInfo(triplegain.level + amount));
         triplegain.maxLevel = 1;
@@ -67,7 +67,7 @@ var init = () => {
     {
         let getDesc = (level) => "pubpower=pub^{" + level + "}";
         let getInfo = (level) => "pubpower=" + getONES(level).toString(0);
-        pubpower = theory.createUpgrade(1, currency_ONE, new ExponentialCost(1e20, Math.log2(1e5)));
+        pubpower = theory.createUpgrade(4, currency_ONE, new ExponentialCost(1e20, Math.log2(1e5)));
         pubpower.getDescription = (_) => Utils.getMath(getDesc(pubpower.level));
         pubpower.getInfo = (amount) => Utils.getMathTo(getInfo(pubpower.level), getInfo(pubpower.level + amount));
         pubpower.maxLevel = 3;
@@ -77,7 +77,7 @@ var init = () => {
     {
         let getDesc = (level) => "twos=2^{" + level + "}";
         let getInfo = (level) => "twos=" + getTWOS(level).toString(0);
-        twos = theory.createUpgrade(1, currency_ONE, new ExponentialCost(1e300, Math.log2(1e300)));
+        twos = theory.createUpgrade(5, currency_ONE, new ExponentialCost(1e300, Math.log2(1e300)));
         twos.getDescription = (_) => Utils.getMath(getDesc(twos.level));
         twos.getInfo = (amount) => Utils.getMathTo(getInfo(twos.level), getInfo(twos.level + amount));
     }
