@@ -129,7 +129,7 @@ var tick = (elapsedTime, multiplier) => {
     let bouns2 = theory.publicationMultiplier;
     currency_ZERO.value += getONES(ones.level);
     currency_TWO.value = getTWOS(twos.level) * BigNumber.TWO;
-    currency_ONE.value = getONES(ones.level) * tau.publicationMultiplier.log10(dt);
+    currency_ONE.value = getONES(ones.level) * theory.publicationMultiplier.log10(dt);
     currency_ZERO.value = getPRESTIGE(prestige.level) * getTRIPLEGAIN(triplegain.level);
     currency.value += 1 * bonus * bouns2 * currency_ZERO.value * getPRESTIGE(prestige.level) * getDOUBLEGAIN(doublegain.level) * getTRIPLEGAIN(triplegain) * getPUBLICATIONPOWER(pubpower.level);
 }
