@@ -120,7 +120,7 @@ var init = () => {
 }
 
 var updateAvailability = () => {
-    c2Exp.isAvailable = c1Exp.level > 0;
+    doublegainExp.isAvailable = prestigeExp.level > 0;
 }
 
 var tick = (elapsedTime, multiplier) => {
